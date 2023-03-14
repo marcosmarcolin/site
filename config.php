@@ -11,7 +11,7 @@ return [
 
     'collections' => [
         'posts' => [
-            'author' => 'Marcos Marcolin', // Default author, if not provided in a post
+            'author' => 'Marcos Marcolin',
             'sort' => '-date',
             'path' => 'blog/{filename}',
         ],
