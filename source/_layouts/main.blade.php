@@ -62,7 +62,7 @@
         <footer class="bg-white text-center text-sm mt-12 py-4" role="contentinfo">
             <ul class="flex flex-col md:flex-row justify-center list-none">
                 <li class="md:mr-2">
-                    <a href="https://github.com/marcosmarcolin/site" target="_blank" title="Tighten website">Marcos Marcolin</a> {{ date('Y') }}.
+                    <a href="https://github.com/marcosmarcolin/site" target="_blank" title="Tighten website">Marcos Marcolin</a>, {{ date('Y') }}.
                 </li>
             </ul>
         </footer>
