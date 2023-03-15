@@ -42,13 +42,13 @@ Não foram exatamente essas palavras, mas próximo disso e nunca esqueci. Essa p
 
 Com isso, fui atrás de algumas pessoas envolvidas com o projeto(extensão) e mandei um simples email, mas direto. Algumas não me responderam, porém um cara me respondeu, sendo Johannes Schlüter.
 
-![Resposta do Johannes](../assets/images/blog/seja-determinado-johannes.png)
+![Resposta do Johannes](/assets/images/blog/seja-determinado-johannes.png)
 
 Não sou fluente em inglês, então traduzi pelo Google a mensagem e enviei. O mesmo retornou no dia seguinte informando que não estava mais envolvido com PHP e indicou a falar com Derick Rethans. Quem é ele? U**m grande contribuidor do core da linguagem e mais conhecido pelo Xdebug, o qual admiro muito.**
 
 Então lá vou novamente, imaginando que nem responderia…mudei algumas linhas da mensagem e encaminhei pra ele. Pimba! Respondeu no dia seguinte(ou talvez no mesmo dia por causa do fuso horário), veja abaixo:
 
-![Resposta do Derick](../assets/images/blog/seja-determinado-derick.png)
+![Resposta do Derick](/assets/images/blog/seja-determinado-derick.png)
 
 **O mesmo respondeu citando cada tópico do email,** sugerindo para verificar um solução parecida no GitHub, informou que compilou/testou a extensão nas versão 5, 7 e 7.3(tendo problemas), identificou _memory leak_(vazamento de memória) que poderiam ser corrigidos e também quanto tempo levaria para corrigir.
 

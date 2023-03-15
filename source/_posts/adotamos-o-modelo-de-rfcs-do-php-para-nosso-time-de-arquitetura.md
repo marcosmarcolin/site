@@ -35,15 +35,15 @@ Claro que, não desenvolvemos um sistema de votação idêntico ao que à Lingua
 
 Hoje temos a seguinte estrutura:
 
-![Menu do Notion com o esquema de RFCs](../assets/images/blog/rfcs-1.png)
+![Menu do Notion com o esquema de RFCs](/assets/images/blog/rfcs-1.png)
 
 **Desta maneira, podemos organizar as RFCs de uma forma simples e democrática.** Quando um tema gera uma discussão com divergência de opiniões, sugerimos o autor escrever uma RFC com mais detalhes e abrir para votação. Abaixo você pode visualizar alguns temas discutidos recentemente.
 
-![Tabela com algumas RFCs discutidas e aprovadas](../assets/images/blog/rfcs-2.png)
+![Tabela com algumas RFCs discutidas e aprovadas](/assets/images/blog/rfcs-2.png)
 
 No item da RFC no Notion, é possível visualizar quem aprovou ou reprovou, bem como a quantidade de votos a favor e contra. Caso alguém tenha alguma dúvida ou outro ponto a ser destacado, é possível comentar no item e iniciar uma discussão.
 
-![Detalhe de uma RFC](../assets/images/blog/rfcs-3.png)
+![Detalhe de uma RFC](/assets/images/blog/rfcs-3.png)
 
 Para iniciar uma RFC, é necessário preencher algumas informações, dentre elas:
 

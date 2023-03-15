@@ -9,7 +9,7 @@ categories: [php, comunidade, opensource]
 
 Olha que criativa essa ideia, desenharam o ‘mundo’ PHP de uma forma divertida de entender hehe
 
-![Mundo PHP](../assets/images/blog/php_world.png)
+![Mundo PHP](/assets/images/blog/php_world.png)
 
 Senti falta de algumas coisas, como a PHP Foundation por exemplo. Mas já vi que será adicionada nas próximas versões. 🙂
 

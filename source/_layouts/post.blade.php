@@ -11,8 +11,6 @@
 
     <h1 class="leading-none mb-2">{{ $page->title }}</h1>
 
-    {{  date_default_timezone_set('America/Sao_Paulo') }}
-
     <p class="text-gray-700 text-xl md:mt-0">{{ $page->author }}  •  {{ date('F j, Y', $page->date) }}</p>
 
     @if ($page->categories)

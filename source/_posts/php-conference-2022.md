@@ -17,15 +17,15 @@ Também, foi possível conhecer alguns excelentes projetos que executam PHP e de
 
 Uma outra coisa que me chamou bastante atenção foi o engajamento das pessoas com o evento, elas amam o ecossistema e a linguagem PHP! E isso eu compartilho com muito prazer.
 
-![IXC na PHP Conference 2022](../assets/images/blog/php-conference-2022-ixc.png)
+![IXC na PHP Conference 2022](/assets/images/blog/php-conference-2022-ixc.png)
 Equipe da IXC. Da esquerda para direita: Eu, Matheus, Franklin, Gustavo e André.
 
 Aproveitando a viagem e sendo um amante do Futebol, na volta aproveitamos para conhecer os estádios dos grandes do futebol Gaúcho, e é claro que eu sou torcedor do **Grêmio**.
 
-![IXC na PHP Conference 2022](../assets/images/blog/php-conference-2022-arena.png)
+![IXC na PHP Conference 2022](/assets/images/blog/php-conference-2022-arena.png)
 Estádio do Grêmio.
 
-![IXC na PHP Conference 2022](../assets/images/blog/php-conference-2022-renato-gaucho.png)
+![IXC na PHP Conference 2022](/assets/images/blog/php-conference-2022-renato-gaucho.png)
 Estátua do maior ídolo do clube, Renato Gaúcho.
 
 O **evento me incentivou a continuar algo que já faz tempo que idealizo: contribuir mais com a comunidade,** mesmo não sendo um expert da linguagem, sei que posso ajudar as pessoas com alguns conteúdos e pretendo disponibilizar mais tempo para isso.

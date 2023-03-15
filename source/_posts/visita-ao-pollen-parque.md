@@ -17,8 +17,8 @@ Eu, particularmente, já atuei como supervisor de 2 estagiários de desenvolvime
 
 Aproveito para agradecer à oportunidade, a qual foi um momento muito rico de troca de experiências.
 
-![Conversa com os estagiários](../assets/images/blog/pollen_parque_1.png)
+![Conversa com os estagiários](/assets/images/blog/pollen_parque_1.png)
 
-![Gustavo, André, Eu, Matheus, Franklin e Isabel](../assets/images/blog/pollen_parque_2.png)
+![Gustavo, André, Eu, Matheus, Franklin e Isabel](/assets/images/blog/pollen_parque_2.png)
 
-![Conversa com os estagiários](../assets/images/blog/pollen_parque_3.png)
+![Conversa com os estagiários](/assets/images/blog/pollen_parque_3.png)

@@ -57,7 +57,7 @@ Mostrarei os resultados comparativos de execução no GitLab, que é a ferrament
 
 _Xdebug v2.7.0 x PCov 1.0.11_
 
-![Xdebug v2.7.0 x PCov 1.0.11](../assets/images/blog/xdebug_pcov.png)
+![Xdebug v2.7.0 x PCov 1.0.11](/assets/images/blog/xdebug_pcov.png)
 Apenas execução dos testes
 
 Na imagem acima, é possível perceber que tem 1 dia de diferença para a execução, mas nada que influencie o resultado final.
@@ -66,7 +66,7 @@ O resultado para nós já é excepcional, **reduzindo em quase 10 minutos o temp
 
 _Xdebug x PCov_
 
-![Xdebug v2.7.0 x PCov 1.0.11](../assets/images/blog/xdebug_pcov_pipeline.png)
+![Xdebug v2.7.0 x PCov 1.0.11](/assets/images/blog/xdebug_pcov_pipeline.png)
 Execução da pipeline completa
 
 Acima, o resultado da execução da pipeline completa.
