@@ -4,7 +4,6 @@ section: content
 title: Visita ao Pollen Parque
 date: 2022-12-28
 description: Adotamos o ‘modelo’ de RFC’s do PHP para nosso time de Arquitetura
-categories: [php, arquitetura, rfc]
 ---
 
 Na semana passada, em visita ao [Pollen Parque](https://br.linkedin.com/company/pollenparque), tivemos a oportunidade de conversar com os estagiários do Projeto Escalade sobre habilidades interpessoais(_soft skills_), a convite da Clarice Bays.
