@@ -290,9 +290,9 @@ $greet = greetUser("Marcolin"); // FATAL ERROR Uncaught TypeError: Return value 
 
 ### PHP 7.2 (2017)
 
-Esta versão introduziu suporte a `object`  como parâmetro de função ou valor de retorno.
+Esta versão introduziu suporte a `object` como parâmetro de função ou valor de retorno.
 
-Para usar uma _type hint object_, basta especificar a palavra-chave `object` antes do tipo do parâmetro ou valor de retorno.
+Para utilizar, basta especificar a palavra-chave `object` antes do tipo do parâmetro ou valor de retorno.
 
 ```php
 function getClassName(object $obj): string
@@ -301,6 +301,14 @@ function getClassName(object $obj): string
 }
 var_dump(getClassName(new stdClass())); // string(8) "stdClass"
 var_dump(getClassName('class')); // FATAL ERROR Uncaught TypeError: Argument 1 passed to getClassName() must be an object, string given
+```
+
+```php
+function getObject() : object 
+{
+    return json_decode('{}');
+}
+var_dump(getObject()); // object(stdClass)#1 (0) { }
 ```
 
 ### PHP 7.4 (2019)
