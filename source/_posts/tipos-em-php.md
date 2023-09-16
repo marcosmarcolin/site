@@ -304,7 +304,7 @@ var_dump(getClassName('class')); // FATAL ERROR Uncaught TypeError: Argument 1 p
 ```
 
 ```php
-function getObject() : object 
+function getObject(): object 
 {
     return json_decode('{}');
 }
