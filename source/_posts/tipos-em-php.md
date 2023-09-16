@@ -213,7 +213,6 @@ Mas o que isso significa? No PHP, a declaração `declare(strict_types=1);` é u
 Para habilitar o modo estrito de tipos em um arquivo PHP, você pode incluir a declaração `declare(strict_types=1)` no início do arquivo.
 
 ```php
-
 <?php
 
 declare(strict_types=1);
@@ -336,7 +335,6 @@ $person2 = new Person("Marcolin", '29'); // Ok
 Com a utilização de `declare(strict_types=1);`, a saída será afetada, uma vez que isso habilita o modo estrito de tipos no PHP.
 
 ```php
-
 declare(strict_types=1);
 
 // code...
@@ -586,5 +584,4 @@ Quando se trata de escrever novo código, é essencial incorporar tipos como med
 * [RFCs PHP](https://wiki.php.net/rfc)
 * [stitcher.io](https://stitcher.io/blog)
 * [Blog Hostinger](https://www.hostinger.com.br/blog/)
-* [Sean Dreilinger](https://durak.org/sean/pubs/) 
-
+* [Sean Dreilinger](https://durak.org/sean/pubs/)
