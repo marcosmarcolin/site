@@ -1,9 +1,9 @@
 ---
 extends: _layouts.post
 section: content
-title: Utilização de tipos em PHP
+title: Declaração de tipos em PHP
 date: 2023-09-18
-description: Tipagem de dados em PHP
+description: O PHP é historicamente reconhecido pela sua tipagem dinâmica, caracterizada pela ausência de obrigatoriedade na especificação dos tipos de dados, visto que o mecanismo interno da linguagem cuida dessa tarefa de forma implícita. Esse paradigma é também conhecido como tipagem fraca.
 categories: [php]
 ---
 
@@ -286,6 +286,21 @@ function greetUser(string $name): void
 
 greetUser("Marcos"); // Hello, Marcos
 $greet = greetUser("Marcolin"); // FATAL ERROR Uncaught TypeError: Return value of greetUser() must be an instance of void, none returned
+```
+
+### PHP 7.2 (2017)
+
+Esta versão introduziu suporte a `object`  como parâmetro de função ou valor de retorno.
+
+Para usar uma _type hint object_, basta especificar a palavra-chave `object` antes do tipo do parâmetro ou valor de retorno.
+
+```php
+function getClassName(object $obj): string
+{
+    return get_class($obj);
+}
+var_dump(getClassName(new stdClass())); // string(8) "stdClass"
+var_dump(getClassName('class')); // FATAL ERROR Uncaught TypeError: Argument 1 passed to getClassName() must be an object, string given
 ```
 
 ### PHP 7.4 (2019)
