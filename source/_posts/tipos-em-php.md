@@ -9,7 +9,7 @@ categories: [php]
 
 O **PHP** é historicamente reconhecido pela sua tipagem dinâmica, caracterizada pela ausência de obrigatoriedade na especificação dos tipos de dados, visto que o mecanismo interno da linguagem cuida dessa tarefa de forma implícita. Esse paradigma é também conhecido como tipagem fraca.
 
-Nas últimas semanada, tem havido um intenso debate sobre a importância da tipagem de dados em aplicações, e é exatamente esse tema que será abordado neste artigo. Nele, exploraremos como é possível utilizar tipos de dados em PHP, bem como em quais versões essa funcionalidade está disponível.
+Nas últimas semanada, tem havido um intenso debate sobre a importância da tipagem de dados em aplicações, e é exatamente esse tema que será abordado neste artigo. Nele, exploraremos como é possível declarar e utilizar tipos de dados em PHP, bem como em quais versões essa funcionalidade está disponível.
 
 Vale ressaltar que não pretendo aqui entrar na discussão sobre se a tipagem é a melhor abordagem em todos os cenários. Pessoalmente, sou um defensor da tipagem sempre que possível, embora compreendo que a ausência dela possa ser justificada, especialmente quando se trata de código legado.
 
