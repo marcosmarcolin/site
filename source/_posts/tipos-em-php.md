@@ -9,7 +9,7 @@ categories: [php]
 
 O **PHP** é historicamente reconhecido pela sua tipagem dinâmica, caracterizada pela ausência de obrigatoriedade na especificação dos tipos de dados, visto que o mecanismo interno da linguagem cuida dessa tarefa de forma implícita. Esse paradigma é também conhecido como tipagem fraca.
 
-Nas últimas semanada, tem havido um intenso debate sobre a importância da tipagem de dados em aplicações, e é exatamente esse tema que será abordado neste artigo. Nele, exploraremos como é possível declarar e utilizar tipos de dados em PHP, bem como em quais versões essa funcionalidade está disponível.
+Nas últimas semanas, tem havido um intenso debate sobre a importância da tipagem de dados em aplicações, e é exatamente esse tema que será abordado neste artigo. Nele, **exploraremos como é possível declarar tipos em PHP, bem como em quais versões essa funcionalidade está disponível.**
 
 Vale ressaltar que não pretendo aqui entrar na discussão sobre se a tipagem é a melhor abordagem em todos os cenários. Pessoalmente, sou um defensor da tipagem sempre que possível, embora compreendo que a ausência dela possa ser justificada, especialmente quando se trata de código legado.
 
@@ -29,13 +29,15 @@ Os tipos de dados são úteis por vários motivos:
 
 Vamos fazer uma breve incursão na história do PHP e explorar os tipos que ele suporta.
 
+Se você está interessado em aprofundar seus conhecimentos sobre tipos em PHP, inclusive em níveis mais avançados, incluí uma palestra ministrada por um _Core Developer_ nas referências deste artigo.
+
 ## PHP 4.0(2000)
 
 Lamentavelmente, não tive a oportunidade de trabalhar com a versão 4 do PHP. 
 
-No entanto, ao realizar uma pesquisa, constatei que esta versão não apresentava qualquer indício de tipagem de dados(além de `resource`(recurso)), sendo totalmente dinâmica e dependente do mecanismo interno do PHP para determinar os tipos de dados utilizados com base em seu valor.
+No entanto, ao realizar uma pesquisa, constatei que esta versão não apresentava qualquer indício de tipagem de dados(além de `resource`(recurso)) na _userland_, sendo totalmente dinâmica e dependente do mecanismo interno do PHP para determinar os tipos de dados utilizados com base em seu valor.
 
-O tipo `resource` é um tipo de dados especial que representa um recurso externo, como uma conexão de banco de dados, um arquivo ou um socket. Os recursos são criados por funções específicas de cada extensão do PHP.
+O tipo `resource` é um tipo de dados especial que representa um recurso externo, como uma conexão de banco de dados, um arquivo ou um _socket_. Os recursos são criados por funções específicas de cada extensão do PHP.
 
 Um exemplo clássico é a criação de um arquivo:
 
@@ -44,15 +46,15 @@ $fp = fopen('file.txt', 'w');
 var_dump($fp); // resource(2) of type (stream)
 ```
 
-É importante destacar que a versão 4 foi marcada pela introdução da reescrita de uma parte fundamental do núcleo da linguagem, com a inclusão do Zend Engine. Foi nesse ponto que ocorreram mudanças substanciais que possibilitaram melhorias significativas nas versões subsequentes do PHP.
+É importante destacar que a versão 4 foi marcada pela introdução da reescrita de uma parte fundamental do núcleo da linguagem, com a inclusão do _Zend Engine_. Foi nesse ponto que ocorreram mudanças importantes que possibilitaram melhorias significativas nas versões subsequentes do PHP.
 
 ## PHP 5.0 (2004)
 
 Nessa época, a coisa ficou mais séria com a introdução do *Type Hinting*(dicas de tipo). Agora, você podia dizer explicitamente que tipo de dado esperava nos argumentos das funções.
 
-Só que não se empolgue demais, meu amigo. Não era como hoje em 2023, onde você pode ser específico até dizer "olá" para uma `string`. Nessa época, era aceito apenas objetos, sendo `class/interface`, além do uso de `self`.
+Só que não se empolgue demais, caro leitor(a). Não era como hoje(2023), nessa época, era aceito apenas instâncias de objetos, sendo `class/interface`, além do uso de `self`.
 
-Veja um exemplo abaixo, o uso é muito simples.
+Veja um exemplo abaixo.
 
 ```php
 class Car 
@@ -69,17 +71,17 @@ class Brand {}
 
 class Driver {}
 
-new Car(new Brand());
+new Car(new Brand()); // Ok
 new Car(new Driver()); // Error Argument 1 passed to Car::__construct() must be an instance of Brand, instance of Driver given
 ```
 
-Basicamente, o construtor de `Car` espera um objeto do tipo `Brand`. Quando não passado, um erro é lançado.
+Basicamente, o método construtor de `Car` espera um objeto do tipo `Brand`. Quando não passado, um erro é lançado.
 
 ### PHP 5.1 (2005)
 
 Agora a gente teve um novo brinquedo na caixa: o tipo `array`.
 
-Em PHP, um `array` é uma estrutura de dados que armazena uma coleção de valores, como números, strings ou outros tipos de dados, em uma única variável.
+Em PHP, `array` é uma estrutura de dados que armazena uma coleção de valores, como números, strings ou outros tipos de dados, em uma única variável.
 
 ```php
 function myFunction (array $names)
@@ -95,7 +97,7 @@ myFunction('Marcos'); // Error Argument 1 passed to myFunction() must be an arra
 
 ### PHP 5.4 (2012)
 
-Um tempinho depois, foi adicionado o tipo `callable`.
+Alguns anos depois, foi inserido o tipo `callable`.
 
 Em PHP, `callable` é um tipo de dado especial que representa uma referência a algo que pode ser chamado como uma função ou método.
 
@@ -117,7 +119,6 @@ function subtract($a, $b)
 
 $resultSum = apply('sum', 10, 2);  // 12
 $resultSubtraction = apply('subtract', 10, 2); // 8
-
 $resultMultiplication= apply('multiplication', 10, 2);  // Error Argument 1 passed to apply() must be callable, string given \ FATAL ERROR Call to undefined function multiplication()
 ```
 
@@ -142,7 +143,7 @@ function greet(string $name)
   return "Hello, $name!";
 }
 
-echo greet("Marcos"); // Hello, Marcos
+echo greet('Marcos'); // Hello, Marcos!
 ```
 
 * `int`
@@ -173,14 +174,14 @@ echo calculateTotalPrice(12.5, 5); // 62.5
 ```php
 function printStatus(bool $status) 
 {
-    return $status ? "Enabled" : "Disabled";
+    return $status ? 'Enabled' : 'Disabled';
 }
 
-echo printStatus(true);  // Enabled
+echo printStatus(true); // Enabled
 echo printStatus(false); // Disabled
 ```
 
-E é claro, não podemos deixar de mencionar as _return type declarations_, ou seja, as declarações de tipos de retorno, que complementam as declarações de tipos nos argumentos.
+E é claro, não podemos deixar de mencionar _return type declarations_, ou seja, as declarações de tipos de retorno, que complementam as declarações de tipos nos argumentos.
 
 Isso significa que agora temos a capacidade de especificar o tipo de dado que uma função irá retornar. Vamos aproveitar dois exemplos anteriores para ilustrar isso.
 
@@ -192,7 +193,7 @@ function greet(string $name): string
   return "Hello, $name!";
 }
 
-echo greet("Marcos"); // Hello, Marcos
+echo greet('Marcos'); // Hello, Marcos!
 ```
 
 * Retorno do tipo `int`
@@ -206,11 +207,11 @@ function calculateAge(int $birthYear): int
 echo calculateAge(1994); // 29
 ```
 
-Nesta versão, também foi introduzido o suporte para `Strict Types`(tipos estritos), complementando os tipos coercitivos.
+Nesta versão, também foi introduzido o suporte para _Strict Types_(tipos estritos), complementando os tipos coercitivos.
 
-Mas o que isso significa? No PHP, a declaração `declare(strict_types=1);` é utilizada para habilitar o modo estrito de tipos. O modo estrito de tipos implica que conversões implícitas entre tipos de dados não são permitidas, assegurando uma verificação rigorosa dos tipos de argumentos e valores de retorno de funções. Isso contribui para evitar comportamentos inesperados e erros relacionados a tipos de dados em seu código.
+Mas o que isso significa? No PHP, a declaração `declare(strict_types=1);` é utilizada para habilitar o modo estrito de tipos. Esse modo, implica que conversões implícitas entre tipos de dados não são permitidas, assegurando uma verificação rigorosa dos tipos de argumentos e valores de retorno de funções. Isso contribui para evitar comportamentos inesperados e erros relacionados a tipos de dados em seu código.
 
-Para habilitar o modo estrito de tipos em um arquivo PHP, você pode incluir a declaração `declare(strict_types=1)` no início do arquivo.
+Para habilitar o modo estrito de tipos em um arquivo PHP, você pode incluir a declaração `declare(strict_types=1);` no início do arquivo.
 
 ```php
 <?php
@@ -226,15 +227,15 @@ echo calculateAge(1994); // 29
 echo calculateAge('1994'); // FATAL ERROR Uncaught TypeError: Argument 1 passed to calculateAge() must be of the type integer, string given
 ```
 
-Você percebeu que no exemplo anterior, ao passar uma saída como `string` , o resultado foi 29? Agora, com o uso dos tipos estritos, a validação torna-se mais rigorosa, levando a erros fatais, e isso é altamente benéfico.
+Você percebeu que no exemplo anterior, ao passar uma saída como `string` , o resultado foi 29? Agora, com o uso dos tipos estritos, a validação torna-se mais rigorosa, levando a um erro fatal, e isso é altamente benéfico.
 
 ### PHP 7.1 (2016)
 
-Na versão 7.1 do PHP, foram introduzidos dois novos recursos importantes: os _Nullable Types_(tipos nulos)e o tipo _Iterable_(iterável), juntamente com o retorno do tipo `void.
+Na versão 7.1 do PHP, foram introduzidos dois novos recursos importantes: os _Nullable Types_(tipos nulos)e o tipo _Iterable_(iterável), juntamente com o retorno do tipo `void`.
 
 * _Nullable Types_
 
-Os tipos nulos em PHP se referem à capacidade de declarar que uma variável ou um parâmetro de função pode aceitar um valor de um tipo específico ou o valor null. Isso permite que você indique explicitamente que uma variável pode não ter um valor definido.
+Os tipos nulos em PHP se referem à capacidade de declarar que uma variável ou um parâmetro de função pode aceitar um valor de um tipo específico ou o valor `null. Isso permite que você indique explicitamente que uma variável pode não ter um valor definido.
 
 Essa funcionalidade foi introduzida através do uso do operador `?` antes do tipo de dado, indicando que a variável pode ser nula. Por exemplo, `?string` significa que a variável pode ser uma `string` ou nula. Essa adição ao PHP proporciona uma maneira mais precisa de lidar com variáveis que podem ou não ter um valor válido.
 
@@ -242,7 +243,7 @@ Essa funcionalidade foi introduzida através do uso do operador `?` antes do tip
 function greet(?string $name) 
 {
     if ($name === null) {
-        echo "Hello, anonymous!";
+        echo 'Hello, anonymous!';
     } else {
         echo "Hello, $name!";
     }
@@ -250,6 +251,7 @@ function greet(?string $name)
 
 greet(null); // Hello, anonymous!
 greet('Marcos'); // Hello, Marcos!
+greet(); // FATAL ERROR Uncaught ArgumentCountError: Too few arguments to function greet(), 0 passed
 ```
 
 * _Iterable_
@@ -283,8 +285,8 @@ function greetUser(string $name): void
     echo "Hello, $name!";
 }
 
-greetUser("Marcos"); // Hello, Marcos
-$greet = greetUser("Marcolin"); // FATAL ERROR Uncaught TypeError: Return value of greetUser() must be an instance of void, none returned
+greetUser('Marcos'); // Hello, Marcos!
+$greet = greetUser('Marcolin'); // FATAL ERROR Uncaught TypeError: Return value of greetUser() must be an instance of void, none returned
 ```
 
 ### PHP 7.2 (2017)
@@ -328,8 +330,8 @@ class Person
     }
 }
 
-$person = new Person("Marcos", 29); // Ok
-$person2 = new Person("Marcolin", '29'); // Ok
+$person = new Person('Marcos', 29); // Ok
+$person2 = new Person('Marcolin', '29'); // Ok
 ```
 
 Com a utilização de `declare(strict_types=1);`, a saída será afetada, uma vez que isso habilita o modo estrito de tipos no PHP.
@@ -339,8 +341,8 @@ declare(strict_types=1);
 
 // code...
 
-$person = new Person("Marcos", 29); // Ok
-$person2 = new Person("Marcolin", '29'); // FATAL ERROR Uncaught TypeError: Argument 2 passed to Person::__construct() must be of the type int, string given,
+$person = new Person('Marcos', 29); // Ok
+$person2 = new Person('Marcolin', '29'); // FATAL ERROR Uncaught TypeError: Argument 2 passed to Person::__construct() must be of the type int, string given,
 ```
 
 É fundamental destacar que as propriedades tipadas não se restringem a dados escalares apenas. Você pode utilizar propriedades tipadas com uma ampla variedade de tipos de dados, abrangendo desde dados escalares até objetos, arrays e outros tipos complexos.
@@ -374,8 +376,8 @@ class Person
     }
 }
 
-$address = new Address("123 Main St", "Cityville", "12345");
-$person = new Person("John", 30, $address);
+$address = new Address('PHP Street', 'Chapecó', '12345-678');
+$person = new Person('Marcos', 28, $address);
 ```
 
 ## PHP 8.0 (2020)
@@ -384,7 +386,7 @@ A versão 8.0 do PHP trouxe uma série de melhorias e novidades que surpreendera
 
 No que diz respeito aos tipos, uma das adições notáveis foi o suporte aos _Union Types_(união de tipos), particularmete, eu adoro esse recurso.
 
-Os _Union types_ permitem que você declare que um parâmetro, um valor de retorno ou uma propriedade de classe pode aceitar valores de dois ou mais tipos diferentes. Os tipos são especificados separados por um caractere de barra vertical `|`.
+Os _Union types_ permitem que você declare que um parâmetro, um valor de retorno ou uma propriedade de classe pode aceitar valores de dois ou mais tipos diferentes. Os tipos são especificados separados por um caractere de barra vertical `|`, mais conhecido como _pipe_.
 
 ```php
 function printValue(string|int $value) 
@@ -392,8 +394,9 @@ function printValue(string|int $value)
     echo "The value is: $value\n";
 }
 
-printValue("Hello, World!"); // The value is: Hello, World!
+printValue('Hello, World!'); // The value is: Hello, World!
 printValue(2023); // The value is: 2023
+printValue(); //FATAL ERROR Uncaught ArgumentCountError: Too few arguments to function printValue(), 0
 ```
 
 Agora, vamos aplicar o uso de _Union Types_ no retorno de uma função:
@@ -412,18 +415,19 @@ echo generateValue(true); // Hello, World!
 echo generateValue(false); // Hello, 2023!
 ```
 
-Além disso, foi introduzido o tipo pseudo `mixed`, que representa um parâmetro, retorno ou propriedade que pode assumir qualquer tipo de valor.
+Além disso, foi introduzido o pseudo tipo `mixed`, que representa um parâmetro, retorno ou propriedade que pode assumir qualquer tipo de valor.
 
 `mixed` é equivalente a união dos tipos `string|int|float|bool|null|array|object|callable|resource`.
 
 ```php
-class Example {
+class Example 
+{
     public mixed $exampleProperty;
     public function foo(mixed $foo): mixed {}
 }
 ```
 
-Não é permitido converter uma variável para o tipo `mixed`, pois este não é um tipo real, mas sim um tipo pseudo.
+Não é permitido converter uma variável para o tipo `mixed`, pois este não é um tipo real.
 
 ```php
 $foo = (mixed) $bar; // FATAL ERROR syntax error
@@ -437,7 +441,7 @@ function foo (mixed|FooClass $bar): int|mixed {} // Fatal error: Type mixed can 
 
 ## PHP 8.1 (2021)
 
-A versão 8.1 do PHP trouxe _Intersection Types_(tipos de interseção) e o tipo de retorno `never.
+A versão 8.1 do PHP trouxe _Intersection Types_(tipos de interseção) e o tipo de retorno `never`.
 
 * _Intersection Types_
 
@@ -467,7 +471,7 @@ class User
 }
 ```
 
-A propriedade `currentUser` deve ser uma instância da classe `User` e implementar a interface `CanLogin`. O método `getLoggedInUser()` retorna uma instância da classe `User` que também implementa a interface `CanLogin`.
+A propriedade `currentUser` deve ser uma instância da classe `User` e implementar a interface `CanLogin`. O método `getLoggedInUser()` retorna uma instância da classe `User` que implementa a interface `CanLogin`.
 
 * Tipo de retorno `never`
 
@@ -500,7 +504,7 @@ foo(); // FATAL ERROR A never-returning function must not return
 
 ## PHP 8.2 (2022)
 
-A inclusão de tipos *stand alone*(autônomos), que englobam null`, `true` e `false`, no PHP 8.2, permite que os desenvolvedores declarem que um parâmetro, propriedade ou retorno de método pode assumir um desses valores.
+A inclusão de tipos *standalone*(autônomos), que englobam `null`, `true` e `false`, no PHP 8.2, permite que os desenvolvedores declarem que um parâmetro, propriedade ou retorno de método pode assumir um desses valores.
 
 Resumidamente, isso significa que o retorno sempre estará de acordo com a definição escolhida.
 
@@ -526,6 +530,8 @@ O mesmo princípio se aplica também para `null` e `true`.
 
 Essa adição, embora possa não ser particularmente empolgante para alguns, enriquece a linguagem com recursos adicionais que podem ser úteis em diversos cenários de desenvolvimento.
 
+* _Disjunctive Normal Form Types_
+
 Outra adição desta versão é _Disjunctive Normal Form Types_(tipos de forma normal disjuntiva), uma nova forma de declarar tipos de dados que permite combinar tipos de união e interseção.
 
 Com a introdução de tipos de união em PHP 8.0, foi possível declarar que um valor poderia ser de um ou mais tipos. Com a introdução de tipos de interseção em PHP 8.1, foi possível declarar que um valor deveria pertencer a todos os tipos especificados.
@@ -533,26 +539,36 @@ Com a introdução de tipos de união em PHP 8.0, foi possível declarar que um 
 _DNF Types_ permitem combinar essas duas formas de declarar tipos. Por exemplo, o tipo `string|int|object` pode ser declarado como `(string&object)|(int&object)`, e podem ser usados em qualquer lugar onde tipos de dados são aceitos, como parâmetros, retornos de funções e propriedades.
 
 ```php
-function foo(mixed $value): (string|int|object) 
+function foo(int|string | (DateTime & bool) $bar) 
 {
-  // code
+    // code
 }
 ```
 
-Esta função pode receber qualquer tipo de valor, incluindo strings, números inteiros e objetos.
+O valor de `$bar` deve ser um número inteiro, uma string OU uma instância da classe `DateTime que também é um booleano.
 
 ```php
-class Bar 
+class Storage
 {
-  public (string|int|object) $value;
+    private (ArrayAccess&Countable)|null $container;
+
+    public function getContainer(): (ArrayAccess & Countable) | null
+    {
+        return $this->container;
+    }
+
+    public function setContainer((ArrayAccess & Countable) | null $container): void
+    {
+        $this->container = $container;
+    }
 }
 ```
 
-Esta classe tem uma propriedade value que pode ser atribuída a qualquer tipo de valor, incluindo strings, números inteiros e objetos.
+Neste caso, `(ArrayAccess & Countable) | null ` é o tipo DNF. O parâmetro `$container` pode ser uma instância da classe que implementa as interfaces `ArrayAccess` e `Countable` ou valor nulo.
 
 ## PHP 8.3 (2023)
 
-A versão 8.3 do PHP, com previsão para novembro de 2023, incluirá um recurso interessante chamado _Typed class constants_(constantes de classe tipadas).
+A versão 8.3 do PHP, com previsão para novembro de 2023, incluirá um recurso chamado _Typed class constants_(constantes de classe tipadas).
 
 O recurso _Typed class constants_ é uma adição significativa que permite declarar um tipo para as constantes de classe. Isso assegura a compatibilidade de tipos das constantes, mesmo quando classes filhas ou implementações de interface as sobrescrevem.
 
@@ -561,21 +577,24 @@ Para declarar uma constante de classe com um tipo, utilize a seguinte sintaxe:
 ```php
 class Foo
 {
-    public const BAR: string = 'bar';
+    public const string A = 'a';
+    public const int B = 1;
+    public const float C = 1.1;
+    public const array E = ['a', 'b'];
 }
 ```
 
-Neste exemplo, a constante BAR é declarada como uma `string`. Isso significa que apenas strings podem ser atribuídas à constante `BAR` e suas sobrescritas em subclasses.
-
 ## Conclusões
 
-A evolução contínua da linguagem PHP ao longo do tempo é uma prática fundamental e esperada. A introdução de recursos relacionados a tipos de dados desempenha um papel crucial nessa evolução. O uso de tipos oferece benefícios significativos, tais como maior segurança na validação de dados, o que, por sua vez, facilita o desenvolvimento e a manutenção de código mais ágil e funcional.
+A evolução contínua da linguagem PHP ao longo do tempo é uma fundamental e esperada pela comunidade. **A introdução de recursos relacionados a tipos de dados desempenha um papel crucial nessa evolução.** O uso de tipos oferece benefícios significativos, tais como maior segurança na validação de dados, o que, por sua vez, facilita o desenvolvimento e a manutenção de código mais ágil e funcional.
 
-Como mencionei anteriormente, sou um defensor do uso de tipos. No entanto, é importante lembrar que ao introduzir tipos em aplicações legadas, podem surgir erros, uma vez que nem sempre se conhece com precisão os tipos de dados que estão sendo passados ou retornados por uma função.
+Como mencionei anteriormente, sou um defensor do uso de tipos. No entanto, é importante lembrar que ao introduzir tipos em aplicações legadas, podem surgir erros inesperados, uma vez que nem sempre se conhece com precisão os tipos de dados que estão sendo passados ou retornados por uma função.
 
 Quando se trata de escrever novo código, é essencial incorporar tipos como medida preventiva contra erros e resultados inesperados.
 
-À medida que novos recursos, como Typed properties, Union Types, Intersection Types, Typed class constants e outros, são incorporados à linguagem, os desenvolvedores têm à disposição ferramentas mais poderosas para criar sistemas robustos e eficientes. Isso contribui para elevar o nível de qualidade dos projetos PHP
+À medida que novos recursos, como _Typed properties, Union Types, Intersection Types, Typed class constants_ e outros, são incorporados à linguagem, os desenvolvedores têm à disposição ferramentas mais poderosas para criar sistemas robustos e eficientes. Isso contribui para elevar o nível de qualidade dos projetos PHP.
+
+Obrigado por chegar até aqui e até a próxima!
 
 ## Referências
 
@@ -585,3 +604,5 @@ Quando se trata de escrever novo código, é essencial incorporar tipos como med
 * [stitcher.io](https://stitcher.io/blog)
 * [Blog Hostinger](https://www.hostinger.com.br/blog/)
 * [Sean Dreilinger](https://durak.org/sean/pubs/)
+* [Lindevs](https://lindevs.com/)
+* [PHP's type system dissected?](https://youtu.be/LUydbYBzjAk)
