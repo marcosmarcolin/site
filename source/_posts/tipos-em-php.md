@@ -235,7 +235,7 @@ Na versão 7.1 do PHP, foram introduzidos dois novos recursos importantes: os _N
 
 * _Nullable Types_
 
-Os tipos nulos em PHP se referem à capacidade de declarar que uma variável ou um parâmetro de função pode aceitar um valor de um tipo específico ou o valor `null. Isso permite que você indique explicitamente que uma variável pode não ter um valor definido.
+Os tipos nulos em PHP se referem à capacidade de declarar que uma variável ou um parâmetro de função pode aceitar um valor de um tipo específico ou o valor `null`. Isso permite que você indique explicitamente que uma variável pode não ter um valor definido.
 
 Essa funcionalidade foi introduzida através do uso do operador `?` antes do tipo de dado, indicando que a variável pode ser nula. Por exemplo, `?string` significa que a variável pode ser uma `string` ou nula. Essa adição ao PHP proporciona uma maneira mais precisa de lidar com variáveis que podem ou não ter um valor válido.
 
@@ -545,7 +545,7 @@ function foo(int|string | (DateTime & bool) $bar)
 }
 ```
 
-O valor de `$bar` deve ser um número inteiro, uma string OU uma instância da classe `DateTime que também é um booleano.
+O valor de `$bar` deve ser um número inteiro, uma string OU uma instância da classe `DateTime` que também é um booleano.
 
 ```php
 class Storage
