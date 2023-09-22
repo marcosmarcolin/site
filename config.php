@@ -8,7 +8,9 @@ return [
     'siteName' => 'Blog do Marcolin',
     'siteDescription' => 'PHP & DevOps & Linux',
     'siteAuthor' => 'Marcos Marcolin',
-
+    'services' => [
+        'disqus' => 'blog-do-marcolin',
+    ],
     'collections' => [
         'posts' => [
             'author' => 'Marcos Marcolin',

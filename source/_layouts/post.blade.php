@@ -44,4 +44,12 @@
             @endif
         </div>
     </nav>
+
+    <br><br>
+
+    @if($page->services->disqus && $page->comments !== false)
+        <div class="mb-4 pb-4">
+            @include('_components.comments')
+        </div>
+    @endif
 @endsection
