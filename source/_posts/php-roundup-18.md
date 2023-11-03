@@ -67,7 +67,7 @@ A class `HTMLDocument` adicionará suporte para análise e serialização de doc
 
 ### [A new JIT implementation based on IR Framework](https://wiki.php.net/rfc/jit-ir) por Dmitry Stogov
 
-A RFC propôs uma nova implementação `JIT`, a qual foi e será desenvolvida separadamente do Core, através de _Intermediate Representaion (IR)_.
+A RFC propôs uma nova implementação `JIT`, a qual foi e será desenvolvida separadamente do Core, através de _Intermediate Representation (IR)_.
 
 A principal vantagem da nova abordagem é que o código-fonte PHP ficará livre dos detalhes de baixo nível da compilação `JIT`. A desvantagem é um tempo de compilação `JIT` mais longo.
 
