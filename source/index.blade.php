@@ -8,7 +8,7 @@
             @endif
 
             <p class="text-gray-700 font-medium my-2">
-                {{ $featuredPost->getDate()->format('F j, Y') }}
+                {{ $featuredPost->getDate()->format('d/m/Y') }}
             </p>
 
             <h2 class="text-3xl mt-0">
