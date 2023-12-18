@@ -28,6 +28,7 @@ Mesmo não sendo da área diretamente, ela apreciou bastante o evento e os temas
 
 Continuo apoiando ativamente a comunidade PHP, reconhecendo que esses eventos fortalecem os laços dentro da comunidade, 
 proporcionam a troca de conhecimentos e possibilitam o _networking_ presencial, algo que o ambiente virtual muitas vezes não consegue oferecer.
+Também, viajar e conhecer novos lugares é algo que levo muito em consideração. ✈️
 
 Para concluir, gostaria de parabenizar os organizadores do evento por promoverem a linguagem e por seu empenho em mantê-la mais vibrante do que nunca!
 
