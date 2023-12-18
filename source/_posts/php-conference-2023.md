@@ -9,7 +9,7 @@ categories: [php, phpconference, comunidade]
 
 No dia 08/12, desloquei-me até Palhoça, SC, para participar da **17ª PHP Conference Brasil**, que ocorreu presencialmente em 09/12, sábado. 🐘
 
-O evento teve lugar no Impact Hub, localizado no bairro Pedra Branca. Destaco a excelente estrutura do local, bem como sua 
+O evento aconteceu no Impact Hub, localizado no bairro Vila Pedra Branca. Destaco a excelente estrutura do local, bem como sua 
 localização privilegiada, próxima a diversas opções de hospedagem, restaurantes e entretenimento. 
 Infelizmente, o final de semana foi marcado por intensas chuvas, o que impediu minha visita à praia.
 
