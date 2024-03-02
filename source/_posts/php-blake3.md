@@ -4,7 +4,7 @@ section: content
 title: BLAKE3 no PHP 
 date: 2024-01-26
 description: Um Pull Request (PR) foi submetido ao projeto PHP com o intuito de adicionar suporte à função de criptografia BLAKE3.
-categories: [php, phpfoundation, opensource]
+categories: [php, opensource, phprfc]
 ---
 
 No dia 19/01, um Pull Request (PR) foi submetido ao projeto PHP com o intuito de adicionar suporte à função de criptografia `BLAKE3`. 🐘🔑
