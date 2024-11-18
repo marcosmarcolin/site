@@ -26,7 +26,7 @@ Events são como cron jobs, mas **gerenciados pelo próprio banco**. Com eles, v
 * **Gerenciamento centralizado:** todas as tarefas estão no mesmo lugar que seus dados.
 * **Agendamento flexível:** execute tarefas de tempos em tempos, em horários específicos, ou apenas uma vez.
 
-## Exemplos de criação para MariaDB/MySQL
+### Exemplos de criação para MariaDB/MySQL
 
 1. Imagine que você queira limpar registros antigos de uma tabela chamada logs automaticamente todos os dias:
 
@@ -57,7 +57,7 @@ DO
   WHERE due_date < NOW() AND status != 'paid';
 ```
 
-🎲 Bancos de Dados que oferecem Events nativamente
+### 🎲 Bancos de Dados que oferecem Events nativamente
 
 ✅ **MariaDB:** suporte completo com CREATE EVENT, permitindo automação de tarefas diretamente no banco.
 
