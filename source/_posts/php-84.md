@@ -40,7 +40,7 @@ class Product
 
 Isso elimina a necessidade de `getters` e `setters` repetitivos, tornando seu código mais limpo e fácil de manter.
 
-Você pode conferir minha explicação completa [neste link](php-property-hooks.md).
+Você pode conferir minha explicação completa [neste link](https://www.marcosmarcolin.com.br/blog/php-property-hooks/).
 
 ## Visibilidade Assimétrica: mais controle nas propriedades - [RFC](https://wiki.php.net/rfc/asymmetric-visibility-v2?utm_source=blog&utm_medium=post&utm_campaign=php84&utm_id=2024)
 
@@ -140,7 +140,7 @@ function array_all(array $array, callable $callback): bool {}
 function array_any(array $array, callable $callback): bool {}
 ```
 
-Você pode conferir minha explicação completa sobre as novas funções [neste link](new-array-functions-php-8-4.md).
+Você pode conferir minha explicação completa sobre as novas funções [neste link](https://www.marcosmarcolin.com.br/blog/new-array-functions-php-8-4/).
 
 ## PDO e SQL: Subclasses específicas para Drivers - [RFC](https://wiki.php.net/rfc/pdo_driver_specific_parsers?utm_source=blog&utm_medium=post&utm_campaign=php84&utm_id=2024)
 
@@ -187,7 +187,7 @@ class Product
 
 echo new Product('Notebook')->getFormattedName(); // Produto: Notebook
 ```
-Você pode conferir minha explicação completa sobre as novas funções [neste link](php-new-without-parentheses.md).
+Você pode conferir minha explicação completa sobre as novas funções [neste link](https://www.marcosmarcolin.com.br/blog/php-new-without-parentheses/).
 
 # Novas classes, interfaces e funções
 
