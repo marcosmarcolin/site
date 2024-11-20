@@ -4,7 +4,7 @@ section: content
 title: Chamar método de classe omitindo parênteses no PHP 8.4
 date: 2024-05-15
 description: Com o PHP 8.4, você poderá chamar métodos de classes sem utilizar parênteses na criação da instância.
-categories: [php, phprfc, opensource]
+categories: [php, php84, phprfc, opensource]
 ---
 
 ## Omissão de parênteses na chamada de métodos de classes

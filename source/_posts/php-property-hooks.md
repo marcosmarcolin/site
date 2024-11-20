@@ -4,7 +4,7 @@ section: content
 title: Property Hooks no PHP 8.4
 date: 2024-04-15
 description: O PHP *vai permitir* Ganchos de Propriedade na versão 8.4.0.
-categories: [php, phprfc, opensource]
+categories: [php, phprfc, php84, opensource]
 ---
 
 ## Property Hooks

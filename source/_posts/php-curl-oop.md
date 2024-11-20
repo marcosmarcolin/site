@@ -4,7 +4,7 @@ section: content
 title: Curl API OOP no PHP 8.4
 date: 2024-02-24
 description: O PHP *vai receber* uma API POO para a extensão cURL na versão 8.4.0.
-categories: [php, phprfc, opensource]
+categories: [php, php84, phprfc, opensource]
 ---
 
 ## API Orientada à Objetos para a extensão cURL
