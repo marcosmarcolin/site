@@ -189,6 +189,23 @@ echo new Product('Notebook')->getFormattedName(); // Produto: Notebook
 ```
 Você pode conferir minha explicação completa sobre as novas funções [neste link](https://www.marcosmarcolin.com.br/blog/php-new-without-parentheses/).
 
+## API de Objetos para BCMath - [RFC](https://wiki.php.net/rfc/support_object_type_in_bcmath)
+
+O novo objeto `BcMath\Number` possibilita o uso de operações matemáticas padrão de forma orientada a objetos com números de precisão arbitrária. 
+
+Esses objetos são imutáveis e implementam a interface `Stringable`, permitindo seu uso em contextos de `string`, como em `echo $num`.
+
+```php
+use BcMath\Number;
+
+$price = new Number('199.99');
+$discount = new Number('50.00');
+$finalPrice = $price - $discount;
+
+echo $finalPrice; // '149.99'
+var_dump($finalPrice > $price); // false
+```
+
 # Novas classes, interfaces e funções
 
 ### Nova implementação JIT baseada no Framework IR - [RFC](https://wiki.php.net/rfc/jit-ir?utm_source=blog&utm_medium=post&utm_campaign=php84&utm_id=2024)
@@ -206,7 +223,6 @@ A função `request_parse_body()` permite o parsing de `multipart/form-data` em 
 ### Novas funções `http_get_last_response_headers(),` `http_clear_last_response_headers()` e `fpow()`.
 
 ### Novas funções `mb_trim()`, `mb_ltrim()`, `mb_rtrim()`, `mb_ucfirst()` e `mb_lcfirst()`.
-
 
 # Alterações obsoletas e incompatibilidades com versões anteriores
 
