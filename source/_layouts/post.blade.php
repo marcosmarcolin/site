@@ -47,6 +47,18 @@
 
     <br><br>
 
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8740342213372708"
+            crossorigin="anonymous"></script>
+    <ins class="adsbygoogle"
+         style="display:block; text-align:center;"
+         data-ad-layout="in-article"
+         data-ad-format="fluid"
+         data-ad-client="ca-pub-8740342213372708"
+         data-ad-slot="7852716112"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
     @if($page->services->disqus && $page->comments !== false)
         <div class="mb-4 pb-4">
             @include('_components.comments')

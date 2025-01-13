@@ -27,6 +27,9 @@
 
                 gtag('config', 'G-564HW54FZX');
             </script>
+
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8740342213372708"
+                    crossorigin="anonymous"></script>
         @endif
 
         <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,700,700i,800,800i" rel="stylesheet">
