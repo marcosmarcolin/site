@@ -2,7 +2,7 @@
 extends: _layouts.post
 section: content
 title: Marcando valores de retorno como importantes (#[\NoDiscard]) no PHP 8.5
-date: 2025-03-25
+date: 2025-03-05
 description: Atributo #[\NoDiscard] no PHP 8.5: evite falhas silenciosas ao ignorar retornos importantes de funções e métodos.
 categories: [php, php85, phprfc, opensource]
 ---
