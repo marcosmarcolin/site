@@ -4,7 +4,7 @@ section: content
 title: 🧪 PHP sendo escrito em... PHP?
 date: 2025-04-01
 description: Não é pegadinha de 1º de abril — essa proposta é real.
-categories: [ php, phpsrc opensource ]
+categories: [ php, phpsrc, opensource ]
 ---
 
 Uma PoC (prova de conceito) recente no Core do PHP me chamou atenção: **a implementação de funções internas usando PHP
