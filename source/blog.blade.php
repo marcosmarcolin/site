@@ -13,6 +13,10 @@ pagination:
     <hr class="border-b my-6">
 
     @foreach ($pagination->items as $post)
+        @if ($post->list_in_blog === false)
+            @continue
+        @endif
+
         @include('_components.post-preview-inline')
 
         @if ($post != $pagination->items->last())

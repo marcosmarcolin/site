@@ -8,6 +8,11 @@
     </div>
 
     @foreach ($page->posts($posts) as $post)
+
+        @if (! $post->getList())
+            @continue
+        @endif
+
         @include('_components.post-preview-inline')
 
         @if (! $loop->last)
