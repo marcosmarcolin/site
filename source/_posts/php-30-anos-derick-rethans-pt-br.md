@@ -13,16 +13,10 @@ em [Inglês](https://www.marcosmarcolin.com.br/blog/php-30-years-derick-rethans-
 Esta entrevista faz parte da série **PHP 30 Anos – Entrevista com Contribuidores**, criada para celebrar as três décadas
 da linguagem e destacar as pessoas que ajudaram e continuam ajudando a moldar o ecossistema do PHP.
 
-**Derick Rethans** é um dos grandes nomes da história do PHP. Criador e mantenedor do Xdebug, contribuidor
-ativo do core, membro da PHP Foundation e envolvido em várias mudanças que marcaram a evolução da linguagem.
+**Derick Rethans** é um dos grandes nomes da história do PHP. Criador e mantenedor do [Xdebug](https://xdebug.org/), contribuidor
+ativo do core, membro da [PHP Foundation](https://thephp.foundation/) e envolvido em várias mudanças que marcaram a evolução da linguagem.
 
 A seguir, você confere a entrevista completa.
-
----
-
-### Houve algum mentor, pessoa ou referência que influenciou sua jornada com PHP?
-
-Prefiro não responder, pois não houve realmente nenhuma pessoa específica.
 
 ---
 
@@ -51,7 +45,7 @@ extensão Date/Time, criei o PIE, o novo PECL e várias outras pequenas contribu
 Além do PHP, sou o criador e único mantenedor do Xdebug, a ferramenta de depuração do PHP. A cada nova versão do PHP, o
 Xdebug exige ainda mais trabalho, e há sempre uma fila contínua de novos recursos para implementar.
 
-Além disso, eu também opero o Xdebug Cloud, uma solução de depuração remota pensada para equipes distribuídas que
+Além disso, eu também opero o [Xdebug Cloud](https://xdebug.cloud/), uma solução de depuração remota pensada para equipes distribuídas que
 precisam compartilhar uma máquina de desenvolvimento PHP.
 
 ---
@@ -125,7 +119,7 @@ Não é Generics.
 
 ### Quais fontes você acompanha para se manter atualizado sobre PHP e desenvolvimento de software?
 
-Leio a lista de e-mails do internals, participo do Slack da PHP Foundation, do Discord phpc.chat e também frequento
+Leio a lista de e-mails do internals, participo do Slack da PHP Foundation, do Discord [phpc.chat](https://phpc.chat/) e também frequento
 grupos de usuários (locais e de outros lugares), além de conversar com as pessoas em conferências.
 
 ---

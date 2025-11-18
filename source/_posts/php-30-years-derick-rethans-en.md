@@ -14,17 +14,11 @@ in [Portuguese](https://www.marcosmarcolin.com.br/blog/php-30-anos-derick-rethan
 This interview is part of the **PHP 30 Years – Contributor Interview** series, created to celebrate three decades of the
 language and highlight the people who helped and continue to help shape the PHP ecosystem.
 
-Derick Rethans is one of the most influential names in the history of PHP. He is the creator and maintainer of Xdebug,
-an active core contributor, a member of the PHP Foundation, and has been involved in several key changes that shaped the
+Derick Rethans is one of the most influential names in the history of PHP. He is the creator and maintainer of [Xdebug](https://xdebug.org/),
+an active core contributor, a member of the [PHP Foundation](https://thephp.foundation/), and has been involved in several key changes that shaped the
 evolution of the language.
 
 Below is the full interview.
-
----
-
-### Was there a mentor, person, or reference who influenced your journey with PHP?
-
-I prefer not to answer, as there wasn't really anyone specific.
 
 ---
 
@@ -53,7 +47,7 @@ extension, created PIE, the new PECL, and many other smaller contributions.
 Besides PHP, I am the creator and sole maintainer of Xdebug, the PHP debugging tool. With every new PHP version, Xdebug
 requires more work, and there is always a continuous flow of new features to implement.
 
-I also run Xdebug Cloud, a remote debugging solution designed for distributed teams that need to share a remote PHP
+I also run [Xdebug Cloud](https://xdebug.cloud/), a remote debugging solution designed for distributed teams that need to share a remote PHP
 development machine.
 
 ---
@@ -125,7 +119,7 @@ Not Generics.
 
 ### What sources do you follow to stay up to date with PHP and software development?
 
-I read the internals mailing list, participate in the PHP Foundation Slack, the phpc.chat Discord server, and attend
+I read the internals mailing list, participate in the PHP Foundation Slack, the [phpc.chat](https://phpc.chat/) Discord server, and attend
 user groups — both local and remote as well as conferences where I talk to people directly.
 
 ---

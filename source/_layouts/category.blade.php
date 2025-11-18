@@ -9,7 +9,7 @@
 
     @foreach ($page->posts($posts) as $post)
 
-        @if (! $post->getList())
+        @if ($post->list_in_blog === false)
             @continue
         @endif
 

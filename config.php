@@ -26,12 +26,6 @@ return [
             },
         ],
     ],
-    'getList' => function ($page) {
-        if (isset($page->list_in_blog) && $page->list_in_blog === false) {
-            return false;
-        }
-        return true;
-    },
     // helpers
     'getDate' => function ($page) {
         return Datetime::createFromFormat('U', $page->date);
