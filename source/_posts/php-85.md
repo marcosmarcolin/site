@@ -17,12 +17,12 @@ das novidades, pois costumo comentar as RFCs e mudanças mais importantes ao lon
 Neste post, trago um resumo das principais melhorias do 8.5. Separei o que mais faz diferença no dia a dia, já que muita
 coisa foi desenvolvida ao longo do ano para deixar a linguagem mais simples, mais rápida e mais consistente.
 
-## Extensão `URI`: análise e manipulação de URLs com API moderna - [RFC](https://wiki.php.net/rfc/url_parsing_api?utm_source=blog&utm_medium=post&utm_campaign=php85&utm_id=2025)
+## Extensão URI: análise e manipulação de URLs com API moderna - [RFC](https://wiki.php.net/rfc/url_parsing_api?utm_source=blog&utm_medium=post&utm_campaign=php85&utm_id=2025)
 
 A nova extensão `URI` agora vem sempre disponível no PHP 8.5. Ela fornece APIs próprias para analisar e modificar URIs e
 URLs seguindo os padrões RFC 3986 e WHATWG URL.
 
-A implementação é baseada nas bibliotecas uriparser (RFC 3986) e Lexbor (WHATWG URL), garantindo um parsing muito mais
+A implementação é garante um parsing muito mais
 consistente que o `parse_url`, que sempre teve limitações e diferenças de comportamento.
 
 PHP 8.4 e anteriores
@@ -91,55 +91,51 @@ reconstruir objetos.
 PHP 8.4 e anteriores
 
 ```php
-readonly class Color
+readonly class UserProfile
 {
     public function __construct(
-        public int $red,
-        public int $green,
-        public int $blue,
-        public int $alpha = 255,
+        public string $name,
+        public string $email,
+        public string $role = 'user',
     ) {}
 
-    public function withAlpha(int $alpha): self
+    public function withRole(string $role): self
     {
-        $values = get_object_vars($this);
-        $values['alpha'] = $alpha;
+        $data = get_object_vars($this);
+        $data['role'] = $role;
 
-        return new self(...$values);
+        return new self(...$data);
     }
 }
 
-$blue = new Color(79, 91, 147);
-$transparentBlue = $blue->withAlpha(128);
+$profile = new UserProfile('Marcos', 'marcos@example.com');
+$admin = $profile->withRole('admin');
 ```
 
 PHP 8.5
 
 ```php
-readonly class Color
+readonly class UserProfile
 {
     public function __construct(
-        public int $red,
-        public int $green,
-        public int $blue,
-        public int $alpha = 255,
+        public string $name,
+        public string $email,
+        public string $role = 'user',
     ) {}
 
-    public function withAlpha(int $alpha): self
+    public function withRole(string $role): self
     {
         return clone($this, [
-            'alpha' => $alpha,
+            'role' => $role,
         ]);
     }
 }
 
-$blue = new Color(79, 91, 147);
-$transparentBlue = $blue->withAlpha(128);
+$profile = new UserProfile('Marcos', 'marcolindev@gmail.com');
+$admin = $profile->withRole('admin');
 ```
 
-## Atributo
-
-`#[\NoDiscard]`: garanta que o retorno seja usado - [RFC](https://wiki.php.net/rfc/marking_return_value_as_important?utm_source=blog&utm_medium=post&utm_campaign=php85&utm_id=2025)
+## Atributo #[\NoDiscard]: garanta que o retorno seja usado - [RFC](https://wiki.php.net/rfc/marking_return_value_as_important?utm_source=blog&utm_medium=post&utm_campaign=php85&utm_id=2025)
 
 O atributo `#[\NoDiscard]` permite marcar funções cujo valor retornado não deve ser ignorado. Se o retorno não for
 utilizado, o PHP emitirá um aviso. Isso aumenta a segurança de APIs em que o retorno é essencial, evitando erros
@@ -299,9 +295,9 @@ Atributos agora podem ser aplicados a constantes.
 * Nova função `grapheme_levenshtein()` para strings multibyte.
 * Métodos novos em DOM: `Dom\Element::getElementsByClassName()` e `Dom\Element::insertAdjacentHTML()`.
 
-### Atributo `#[\DelayedTargetValidation]`
+### Atributo #[\DelayedTargetValidation]
 
-Permite suprimir erros de compilação de atributos aplicados a alvos inválidos, útil para extensões e atributos internos.
+O uso do atributo `#[\DelayedTargetValidation]` permite suprimir erros de compilação de atributos aplicados a alvos inválidos, útil para extensões e atributos internos.
 
 ## Descontinuações e quebras de compatibilidade
 
@@ -316,7 +312,7 @@ Permite suprimir erros de compilação de atributos aplicados a alvos inválidos
 * A diretiva INI `disable_classes` foi removida.
 * Finalizar `case` com ponto e vírgula foi descontinuado.
 * Usar `null` como índice de array ou ao chamar `array_key_exists()` agora é descontinuado. Use string vazia.
-* Não é mais possível usar “array” e “callable” como nomes de alias em `class_alias()`.
+* Não é mais possível usar `array` e `callable` como nomes de alias em `class_alias()`.
 
 ### Serialização e lifecycle
 
