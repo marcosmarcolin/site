@@ -22,7 +22,7 @@ coisa foi desenvolvida ao longo do ano para deixar a linguagem mais simples, mai
 A nova extensão `URI` agora vem sempre disponível no PHP 8.5. Ela fornece APIs próprias para analisar e modificar URIs e
 URLs seguindo os padrões RFC 3986 e WHATWG URL.
 
-A implementação é garante um parsing muito mais
+A implementação garante um parsing muito mais
 consistente que o `parse_url`, que sempre teve limitações e diferenças de comportamento.
 
 PHP 8.4 e anteriores
