@@ -7,9 +7,13 @@ description: O PHP é historicamente reconhecido pela sua tipagem dinâmica, car
 categories: [php]
 ---
 
-O **PHP** é historicamente reconhecido pela sua tipagem dinâmica, caracterizada pela ausência de obrigatoriedade na especificação dos tipos de dados, visto que o mecanismo interno da linguagem cuida dessa tarefa de forma implícita. Esse paradigma é também conhecido como tipagem fraca.
+> Atualizado em fevereiro de 2025, contemplando alterações até o PHP 8.4.
 
-Nas últimas semanas, tem havido um intenso debate sobre a importância da tipagem de dados em aplicações, e é exatamente esse tema que será abordado neste artigo. Nele, **exploraremos como é possível declarar tipos em PHP, bem como em quais versões essa funcionalidade está disponível.**
+O **PHP** foi historicamente reconhecido por sua tipagem dinâmica, muitas vezes associada à chamada tipagem fraca. Durante muitos anos, isso foi utilizado como argumento para criticar a linguagem, especialmente quando comparada a linguagens estaticamente tipadas.
+
+No entanto, essa visão não acompanha a evolução do PHP nas últimas versões. Desde o PHP 7, o sistema de tipos passou por uma transformação significativa, tornando a linguagem muito mais segura, previsível e adequada a aplicações de médio e grande porte.
+
+Nas últimas semanas, tem havido um intenso debate sobre a importância da tipagem de dados em aplicações modernas, e é exatamente esse tema que será abordado neste artigo. Aqui, exploraremos como declarar tipos em PHP e como esse sistema evoluiu ao longo das versões.
 
 Vale ressaltar que não pretendo aqui entrar na discussão sobre se a tipagem é a melhor abordagem em todos os cenários. Pessoalmente, sou um defensor da tipagem sempre que possível, embora compreendo que a ausência dela possa ser justificada, especialmente quando se trata de código legado.
 
@@ -584,15 +588,62 @@ class Foo
 }
 ```
 
+## PHP 8.4 (2024)
+
+A versão 8.4 do PHP trouxe um ajuste importante relacionado à declaração de tipos em parâmetros de função.
+
+Até versões anteriores, era possível declarar um parâmetro com valor padrão `null` sem explicitar que ele aceitava `null` no tipo, como no exemplo abaixo:
+
+```php
+function formatName(string $name = null): string
+{
+    return strtoupper($name);
+}
+```
+
+Embora funcional, essa abordagem era inconsistente, pois o tipo declarado `(string)` não refletia corretamente o valor `null` permitido na assinatura.
+
+A partir do PHP 8.4, esse comportamento passou a gerar um _deprecation warning._ Agora, é necessário declarar explicitamente que o parâmetro pode ser nulo, utilizando `?` ou `union types`.
+
+Veja a forma correta:
+
+```php
+function formatName(?string $name = null): string
+{
+    return strtoupper($name ?? 'anonymous');
+}
+
+// Ou
+
+function formatName(string|null $name = null): string
+{
+    return strtoupper($name ?? 'anonymous');
+}
+```
+
+## Tipagem além da linguagem: Análise estática com PHPStan
+
+Mesmo com toda a evolução do sistema de tipos nativo do PHP, ainda é possível elevar o nível de segurança utilizando ferramentas de análise estática como o **PHPStan**.
+
+O PHPStan analisa o código sem executá-lo e consegue identificar:
+
+* Inconsistências de tipos
+* Chamadas de métodos inexistentes
+* Uso incorreto de null
+* Problemas em generics via PHPDoc
+* Código morto ou impossível de executar
+
+Com níveis mais altos de análise, é possível alcançar um rigor comparável ao de linguagens estaticamente tipadas, mesmo em projetos legados.
+
 ## Conclusões
 
 A evolução contínua da linguagem PHP ao longo do tempo é uma fundamental e esperada pela comunidade. **A introdução de recursos relacionados a tipos de dados desempenha um papel crucial nessa evolução.** O uso de tipos oferece benefícios significativos, tais como maior segurança na validação de dados, o que, por sua vez, facilita o desenvolvimento e a manutenção de código mais ágil e funcional.
 
-Como mencionei anteriormente, sou um defensor do uso de tipos. No entanto, é importante lembrar que ao introduzir tipos em aplicações legadas, podem surgir erros inesperados, uma vez que nem sempre se conhece com precisão os tipos de dados que estão sendo passados ou retornados por uma função.
+Sou defensor do uso de tipos sempre que possível. Ao aplicá-los em sistemas legados, é comum que inconsistências venham à tona, mas isso não é um problema da tipagem e sim um reflexo de contratos implícitos que antes não estavam claros.
 
-Quando se trata de escrever novo código, é essencial incorporar tipos como medida preventiva contra erros e resultados inesperados.
+Para novo código, declarar tipos é uma medida preventiva contra erros e comportamentos inesperados, além de elevar o nível de qualidade do projeto.
 
-À medida que novos recursos, como _Typed properties, Union Types, Intersection Types, Typed class constants_ e outros, são incorporados à linguagem, os desenvolvedores têm à disposição ferramentas mais poderosas para criar sistemas robustos e eficientes. Isso contribui para elevar o nível de qualidade dos projetos PHP.
+Considerando a evolução até o PHP 8.5, afirmar que o problema do PHP é a ausência de tipagem não condiz com a realidade atual da linguagem.
 
 Obrigado por chegar até aqui e até a próxima!
 
