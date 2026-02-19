@@ -1,7 +1,7 @@
 ---
 extends: _layouts.post
 section: content
-title: 🐘 PHP 30 Years – A Conversation with Larry Garfield
+title: 🐘 PHP 30 Years - A Conversation with Larry Garfield
 date: 2026-02-18
 description: Interview from the PHP 30 Years series with Larry Garfield.
 list_in_blog: false
@@ -23,7 +23,7 @@ Experience* at Platform.sh.
 Larry is a member of the PHP-FIG *Core Committee* and has co-authored several important PHP RFCs, including proposals
 around **`Enums`**, **`Property Hooks`**, and the **`Pipe Operator`**.
 
-He is also the author of multiple books on PHP, including _Thinking Functionally in PHP_ and _Exploring PHP 8.0_.
+He is also the author of multiple books on PHP, including _[Thinking Functionally in PHP](https://leanpub.com/thinking-functionally-in-php)_ and _[Exploring PHP 8.0](https://leanpub.com/exploringphp80)_.
 
 Below is the full interview.
 
