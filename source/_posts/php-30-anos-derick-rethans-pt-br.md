@@ -36,7 +36,7 @@ mudado a forma como sua interface em C funcionava, e isso exigia muito trabalho 
 
 ---
 
-### Qual é o seu papel atual e que tipo de trabalho você realiza no dia a dia?
+### Qual é o seu papel atualmente, e que tipo de trabalho você faz no dia a dia?
 
 Atualmente, sou uma das onze pessoas contratadas pela PHP Foundation para trabalhar no projeto PHP. A maior parte do meu
 tempo hoje é dedicada à manutenção da infraestrutura de servidores, mas recentemente também trabalhei em melhorias na
@@ -124,7 +124,7 @@ grupos de usuários (locais e de outros lugares), além de conversar com as pess
 
 ---
 
-### Gostaria de deixar uma mensagem para a comunidade PHP Brasileira?
+### Você gostaria de deixar uma mensagem para a comunidade PHP do Brasil?
 
 Aproveitei muito meu tempo palestrando em São Paulo em 2006. Preciso encontrar uma desculpa para visitar novamente!
 
