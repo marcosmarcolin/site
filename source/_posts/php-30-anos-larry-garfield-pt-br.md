@@ -17,10 +17,10 @@ Larry Garfield é uma das vozes mais respeitadas do ecossistema PHP moderno.
 Contribuidor de longa data do Drupal, ele liderou a iniciativa de *Web Services* do Drupal 8, que ajudou a transformar o
 Drupal em uma plataforma PHP moderna.
 Ele já atuou como *Principal Engineer* na MakersHub, *Staff Engineer* na TYPO3 e na LegalZoom, e *Director of Developer
-Experience* na Platform.sh.
+Experience* na Platform.sh(agora Upsun).
 
 Larry é membro do *Core Committee* da PHP-FIG e coautor de várias RFCs importantes do PHP, incluindo propostas relacionadas
-a **`Enums`**, **`Property Hooks`** e ao **`Pipe Operator`**.
+a **Enums**, **Property Hooks** e ao **Pipe Operator**.
 
 Ele também é autor de vários livros sobre PHP, incluindo _[Thinking Functionally in PHP](https://leanpub.com/thinking-functionally-in-php)_ e _[Exploring PHP 8.0](https://leanpub.com/exploringphp80)_.
 
@@ -60,7 +60,7 @@ blog, eu li, e assim começou a campanha _GoPHP5_, para coordenar vários projet
 de uma vez só (na época, a versão mais recente).
 
 Nós lançamos em 5 de janeiro de 2007 com 6 projetos e 3 provedores de hospedagem comprometidos a suportar apenas PHP 5.2 nas próximas
-versões. Um mês depois, já tínhamos mais de 100 projetos e 200 provedores de hospedagem aderindo, e o time do **PHP Internals** tinha
+versões. Um mês depois, já tínhamos mais de 100 projetos e 200 provedores de hospedagem aderindo, e o time do PHP Internals tinha
 decidido abandonar o suporte ao PHP 4 também. Nós conseguimos enterrar uma linguagem (PHP 4) e, eu acredito, salvamos
 o PHP.
 
@@ -77,24 +77,24 @@ preconceituosa e desonesta do que eu poderia imaginar), mas continuei ativo na c
 circuito de conferências, onde eu palestrava com frequência em eventos pelo mundo. Nessa época eu trabalhava com
 relações com desenvolvedores (*DevRel*) em uma *startup* de hospedagem e tocava meu trabalho com PHP em paralelo.
 
-Eu entrei na lista do **PHP Internals** durante o projeto _GoPHP5_, mas eu só comecei a contribuir com o PHP em si por
+Eu entrei na lista do PHP Internals durante o projeto _GoPHP5_, mas eu só comecei a contribuir com o PHP em si por
 volta de 2020. A primeira RFC que eu publiquei foi sobre *comprehensions* no estilo do Python, mas ela não tinha uma
 implementação significativa e a recepção foi morna, então eu abandonei. A primeira que realmente foi para frente foi
-**`Enums`**, que eu colaborei com Ilija Tovilo. Ele fez o código, mas não queria se incomodar em escrever a RFC em inglês
+Enums, que eu colaborei com Ilija Tovilo. Ele fez o código, mas não queria se incomodar em escrever a RFC em inglês
 ou discutir na *mailing list*. Eu, felizmente, escrevo inglês técnico muito bem e não me importo de discutir. :-)
 Essa foi a primeira de várias colaborações, e trabalhamos juntos desde então.
 
 Eu também autopubliquei meu primeiro livro solo, _Thinking Functionally in PHP_, em 2020, baseado no então recém-lançado
 PHP 7.4. Ele teve um sucesso razoável e, desde então, tem servido como guia para eu escolher em quais recursos trabalhar
 no PHP. Como tornar PHP uma linguagem melhor para programação funcional? Como tornar técnicas funcionais mais fáceis de
-usar? O **`Pipe Operator`**, **partial function application**, **`Enums`** e RFCs semelhantes fazem parte dessa história
+usar? O Pipe Operator, partial function application, Enums e RFCs semelhantes fazem parte dessa história
 maior.
 
 Embora eu tenha publicado algumas bibliotecas PHP ao longo dos anos, a mais ambiciosa foi `Crell/Serde`, lançada em 2022.
 
 Eu comecei esse projeto originalmente enquanto trabalhava para a TYPO3, porque precisávamos de um novo
-*config-loader/deserializer* mais flexível do que qualquer coisa no mercado, então eu construí um. Claro, a TYPO3
-acabou não usando, mas viva o *Open Source*: eu ainda pude lançar o projeto.
+_config-loader/deserializer_ mais flexível do que qualquer coisa no mercado, então eu construí um. Claro, a TYPO3
+acabou não usando, mas viva o _Open Source_: eu ainda pude lançar o projeto.
 
 ---
 
@@ -129,9 +129,9 @@ conhecido na comunidade PHP fora do Drupal.
 Eu defendo programação funcional desde 2011, quando dei minha primeira palestra sobre o tema em uma conferência de
 Drupal. Claro, meu conhecimento nessa área cresceu bastante desde então, e com meu livro de 2020 eu consolidei uma
 posição como “o cara de FP” em muitos círculos de PHP. E eu estou OK com isso, e esse é um dos fios condutores de boa
-parte do meu trabalho no **PHP Internals**.
+parte do meu trabalho no PHP Internals.
 
-Colocar **`Enums`** no PHP foi mais fácil do que algumas RFCs que vieram depois, mas também foi um grande ponto de virada,
+Colocar Enums no PHP foi mais fácil do que algumas RFCs que vieram depois, mas também foi um grande ponto de virada,
 quando eu me tornei “um contribuidor do core”. Eu não sei se isso me trouxe algo além de precisar de remédio para azia,
 mas ainda assim foi uma sensação incrível.
 
@@ -141,7 +141,7 @@ mas ainda assim foi uma sensação incrível.
 
 Ingenuidade e teimosia.
 
-Não me ocorreu o quão grande o _GoPHP5_ era até eu já estar bem no meio. Eu só queria poder usar `PDO` para a camada de banco
+Não me ocorreu o quão grande o _GoPHP5_ era até eu já estar bem no meio. Eu só queria poder usar PDO para a camada de banco
 de dados do Drupal. Eu não comecei querendo mudar a direção do ecossistema; eu só quis resolver uma dor. Se eu tivesse
 percebido o tamanho da coisa, talvez eu nem tivesse começado. Mas, uma vez dentro, eu fui até o fim.
 
@@ -188,9 +188,9 @@ Nenhum de nós sabe tudo. Todos nós sabemos muito, muito pouco, em comparação
 
 ### Na sua opinião, quais foram os avanços mais significativos do PHP nos últimos anos?
 
-Isso pode parecer pequeno, mas **`constructor property promotion`**.
+Isso pode parecer pequeno, mas _constructor property promotion_.
 
-Antes do `PHP 8.0`, defender injeção de dependências de forma limpa era... honestamente, bem difícil. Fazer DI direito
+Antes do PHP 8.0, defender injeção de dependências de forma limpa era... honestamente, bem difícil. Fazer DI direito
 envolvia digitar praticamente a mesma sequência de caracteres (tipo e nome da variável) pelo menos 4 vezes. Muitos devs,
 compreensivelmente, simplesmente não queriam ter esse trabalho, e não faziam. É daí que vêm gambiarras feias como as
 “facades” do Laravel.
@@ -201,10 +201,10 @@ maioria dos casos é: “escreve uma classe, lista o que você quer, pronto”. 
 subestimar. (E isso também significa que as facades do Laravel hoje estão resolvendo um problema que não existe há 6 anos,
 então todo mundo precisa parar de usar isso, agora mesmo.)
 
-**`Named arguments`** e **`attributes`** saíram na mesma época, e os três se encaixaram perfeitamente. O 8.0 foi, de fato, uma
+_Named arguments_ e _attributes_ saíram na mesma época, e os três se encaixaram perfeitamente. O 8.0 foi, de fato, uma
 revolução.
 
-Mais recentemente, pode parecer autopromoção eu destacar as RFCs de **`Asymmetric Visibility`** e **`Property Hooks`** que eu
+Mais recentemente, pode parecer autopromoção eu destacar as RFCs de _Asymmetric Visibility_ e _Property Hooks_ que eu
 e Ilija escrevemos, mas, juntas (e com *interface properties* que conseguimos no caminho), elas mudaram completamente a
 forma como se escreve PHP. (Ou como poderia/deveria ser.) “Me dê informações sobre este objeto” agora é só uma *property*.
 Se ela é *backed* por um valor real ou não é irrelevante. Ela pode ser dinâmica, cacheada ou apenas “gravável” internamente.
@@ -242,7 +242,7 @@ na maior parte dele.
 ### Como você enxerga o papel da PHP Foundation no futuro da linguagem?
 
 A PHP Foundation foi e continua sendo absolutamente crucial para o crescimento contínuo do PHP na última meia década.
-Hoje em dia, algo em torno de metade de todos os *merges* em `php-src` vem de um dos desenvolvedores pagos pela Foundation.
+Hoje em dia, algo em torno de metade de todos os *merges* em _php-src_ vem de um dos desenvolvedores pagos pela Foundation.
 E isso não é só RFCs e outras melhorias (das quais há muitas), mas também correções de bugs e manutenção “invisível”.
 
 Eu gostaria muito que a Foundation assumisse um papel mais forte e mais de liderança no PHP. Não só no código (onde um
@@ -265,7 +265,7 @@ ridicularizado, porque seu conhecimento está 20 anos desatualizado. (Embora a c
 
 O mesmo é verdade para o PHP... ou pelo menos deveria ser. PHP moderno, bem escrito, é uma linguagem muito, muito boa, com
 a maioria dos recursos que você esperaria de uma linguagem “moderna”. Ainda existem algumas lacunas, claro; o mesmo vale
-para qualquer linguagem. `PHP 8.6` terá uma sintaxe de **`partial function application`** mais flexível do que qualquer outra
+para qualquer linguagem. _PHP 8.6_ terá uma sintaxe de _partial function application_ mais flexível do que qualquer outra
 linguagem que eu conheço. O sistema de tipos é notavelmente robusto, faltando apenas *generics*, que são, bom, difíceis em
 uma linguagem interpretada. (Ninguém tem isso ainda.)
 
@@ -299,7 +299,7 @@ totalmente certos.
 
 Não é só sobre *async*, embora isso seja absolutamente crítico. Nós temos *async* há anos, mas sem um *IO* unificado para lidar
 com código bloqueante e não bloqueante, isso nunca realmente pegou. É por isso que os esforços atuais para uma nova
-**`Async API`** nativa são tão interessantes, embora eu ache que ainda precisam de ajustes.
+_Async API_ nativa são tão interessantes, embora eu ache que ainda precisam de ajustes.
 
 O modo *worker* do FrankenPHP também faz parte do quadro e, para projetos atuais, é provavelmente o caminho mais fácil para
 seguir. Os ganhos de performance são enormes, mas tão importante quanto isso é que, quando o PHP não reinicia a cada
@@ -329,8 +329,8 @@ dois, eu não sei. Mas é para lá que o PHP precisa ir.
 
 ### Há alguma ferramenta, biblioteca ou prática no ecossistema PHP que você realmente gosta de usar hoje?
 
-Basicamente, todo projeto PHP que eu crio hoje começa com **PHPUnit** e **PHPStan**. Eu também tenho **PHPBench** e
-**PHPMetrics** no meu kit padrão, embora eu não use tanto.
+Basicamente, todo projeto PHP que eu crio hoje começa com *PHPUnit* e *PHPStan*. Eu também tenho *PHPBench* e
+*PHPMetrics* no meu kit padrão, embora eu não use tanto.
 
 Meu ambiente Docker quase sempre vem do [PHPDocker.io](https://phpdocker.io/). (Ótimo para dev, não tenho certeza se é bom
 para produção.)
@@ -346,11 +346,13 @@ está sendo testado. O que é digitado primeiro pode variar, eu faço um pouco d
 o suficiente para aparecerem no mesmo commit. Código testável é um ótimo proxy de código desacoplado, fácil de modificar,
 fácil de reaproveitar, fácil de acelerar quando necessário, etc.
 
+E, claro, o _Xdebug_, sem o qual eu estaria totalmente perdido
+
 ---
 
 ### Quais fontes você acompanha para se manter atualizado sobre PHP e desenvolvimento de software?
 
-Eu leio a lista do **PHP Internals** com frequência, naturalmente.
+Eu leio a lista do PHP Internals com frequência, naturalmente.
 
 Eu também acompanho a tag `#PHP` no Mastodon, o que me dá bastante conteúdo para eu ver ou ignorar. Eu estou no servidor
 [PHPC.social](https://phpc.social/about), onde também sou um moderador de baixo nível.
