@@ -11,12 +11,13 @@ description: Um pouco sobre mim
          alt="Foto de Marcos Marcolin, engenheiro de software sênior"
          class="flex rounded-full h-64 w-64 bg-contain mx-auto md:float-right my-6 md:ml-10">
 
-    <p class="mb-6">Olá! Meu nome é <strong>Marcos Marcolin</strong>, sou <strong>Engenheiro de Software
-            Sênior.</strong></p>
+    <p class="mb-6">Olá! Meu nome é <strong>Marcos Marcolin</strong>, sou <strong>Engenheiro de Software Sênior</strong>
+        e atuo principalmente com desenvolvimento back-end em <strong>PHP</strong>.</p>
 
     <h3>Experiência</h3>
-    <p class="mb-6">Desde 2009 na área, atuei como Webdesigner, desenvolvedor front-end e à partir de 2014, meu foco
-        passou a ser o desenvolvimento back-end, especialmente em <strong>PHP.</strong></p>
+    <p class="mb-6">Estou na área desde 2009. Iniciei como Webdesigner, depois atuei como desenvolvedor front-end e,
+        desde 2014, concentro meu trabalho no desenvolvimento back-end, com foco em arquitetura, performance e evolução
+        de sistemas em PHP.</p>
 
     <h3>Formação</h3>
     <p class="mb-6">Estudei <strong>Licenciatura em Informática</strong> na UTFPR, especialização em <strong>Desenvolvimento
