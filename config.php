@@ -1,16 +1,10 @@
 <?php
 
-use Dotenv\Dotenv;
 use Illuminate\Support\Str;
 
-if (file_exists(__DIR__ . '/.env')) {
-    $dotenv = Dotenv::createImmutable(__DIR__);
-    $dotenv->safeLoad();
-}
-
 return [
-    'baseUrl' => env('APP_BASE_URL', 'https://www.marcosmarcolin.com.br'),
-    'production' => env('APP_PRODUCTION', true),
+    'baseUrl' => 'https://www.marcosmarcolin.com.br',
+    'production' => true,
     'siteName' => 'Blog do Marcolin',
     'siteDescription' => 'PHP & DevOps & Linux',
     'siteAuthor' => 'Marcos Marcolin',
